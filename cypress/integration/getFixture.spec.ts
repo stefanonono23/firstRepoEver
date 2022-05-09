@@ -7,6 +7,5 @@ describe('Login to OrangeHRM website', () => {
 
     it('Validate successful Login', function () {
      cy.visit('https://opensource-demo.orangehrmlive.com/')
-    }
     })
 })
