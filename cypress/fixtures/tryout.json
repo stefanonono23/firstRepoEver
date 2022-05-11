@@ -1,3 +1,5 @@
 {
-  "email": "hello@cypress.io"
+  "email": "hello@cypress.io",
+  "password": "dummyPassword",
+  "something": "another one"
 }
