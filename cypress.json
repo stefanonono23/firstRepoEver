@@ -2,5 +2,17 @@
   "env": {
     "email" : "stefanonono23@gmail.com",
     "password" : "Aa123456!"
-  }
+  },
+
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "My Test Suite",
+    "embeddedScreenshots": true,
+    "html": true,
+    "inlineAssets": true
+  },
+
+  "video": false
 }
