@@ -4,14 +4,10 @@
     "password" : "Aa123456!"
   },
 
-  "reporter": "cypress-mochawesome-reporter",
+  "reporter": "mochawesome",
   "reporterOptions": {
-    "reportDir": "cypress/reports",
-    "charts": true,
-    "reportPageTitle": "My Test Suite",
-    "embeddedScreenshots": true,
-    "html": true,
-    "inlineAssets": true
+    "reportFilename": "mochawesome-report",
+    "timestamp": "longDate"
   },
 
   "video": false
