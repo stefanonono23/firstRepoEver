@@ -1,5 +1,11 @@
 describe('testing the login into Google accounts process', () => {
 
+   /* beforeEach(() => {
+        const logInButton: string = '#w3loginbtn'
+        cy.visit('https://www.w3schools.com/')
+        cy.get(logInButton).invoke('text').as('name')
+    })*/
+
     beforeEach(() => {
         cy.fixture('tryout').as('workplz')
     })

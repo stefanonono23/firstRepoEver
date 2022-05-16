@@ -2,5 +2,13 @@
   "env": {
     "email" : "stefanonono23@gmail.com",
     "password" : "Aa123456!"
-  }
+  },
+
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportFilename": "mochawesome-report",
+    "timestamp": "longDate"
+  },
+
+  "video": false
 }
