@@ -5,10 +5,10 @@ describe('opening new tab', function () {
     })
 
     it('opening new tab by removing attribute target pracitice', () => {
-        const newWindow = 'New Window'
+        const containorOfNewWindowText = 'h3'
         cy.contains('Click Here').invoke('removeAttr', 'target').click()
-        cy.url().should('have.text', '/windows/new')
-        cy.get(newWindow).should('have.text', 'New Window')
+        cy.url().should('include', '/windows/new')
+        cy.get(containorOfNewWindowText).should('have.text', 'New Window')
     })
 
     it('opening new tab and spy/stub pracitice', () => {

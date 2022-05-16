@@ -11,11 +11,14 @@ describe('practice question', function () {
         const goToLoginPage = '#w3loginbtn'
         const userNameInput = '#modalusername'
         const passwordInput = '#current-password'
+        const loginBuuton = 'Log in'
 
         cy.visit(w3School)
         cy.wait('@allJpgFiles').its('response.statusCode').should('eq', 200)
         cy.get(goToLoginPage).click()
         cy.get(userNameInput).type(this.userData.email)
         cy.get(passwordInput).type(this.userData.password)
+        cy.get('span').contains('Log in').click()
+        cy.get('h2').contains('Hi, stefano').should('be.visible')
     })
 })
