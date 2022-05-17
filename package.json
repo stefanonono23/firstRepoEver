@@ -22,8 +22,7 @@
   "scripts": {
     "delete-mochawesome-folder": "npx rm -f mochawesome-report/*.json",
     "run all tests": "npx cypress run",
-    "merge-json": "npx mochawesome-merge --reportDir mochawesome-report > mochawesome-report/finalReport.json",
-    "force-ASCII": "npx mochawesome-merge --reportDir mochawesome-report | out-file -encoding ascii mochawesome-report/finalReport.json",
+    "merge-json": "npx mochawesome-merge --reportDir mochawesome-report -o mochawesome-report/finalReport.json",
     "html-generator": "npx marge mochawesome-report/finalReport.json --reportDir ./ --inline"
   }
 
