@@ -19,3 +19,4 @@ describe('opening new tab', function () {
         cy.get('@redirect').should('be.calledWith', '_blank', '/about')
     })
 })
+
