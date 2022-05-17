@@ -7,7 +7,7 @@ describe('testing the login into Google accounts process', () => {
     })*/
 
     beforeEach(() => {
-        cy.fixture('tryout').as('workplz')
+        cy.fixture('userData').as('workplz')
     })
 
     it('search for Google accounts sign in page', () => {

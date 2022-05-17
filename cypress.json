@@ -7,8 +7,8 @@
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportFilename": "mochawesome-report",
+    "html": false,
+    "overwrite": false,
     "timestamp": "longDate"
-  },
-
-  "video": false
+  }
 }
