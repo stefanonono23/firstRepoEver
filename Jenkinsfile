@@ -1,9 +1,24 @@
 pipeline {
-    agent { docker { image 'ruby:3.0.3-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'ruby --version'
+                bat 'npm install'
+                bat 'docker build .'
+            }
+        }
+        stage('Test') {
+            steps {
+            parallel{
+              a: {
+                  bat 'docker run --entrypoint=cypress
+                      onii-chann run --spec cypress/integration/questionNumber2.spec.ts'
+                  },
+               b: {
+                   bat 'docker run --entrypoint=cypress
+                         onii-chann run --spec cypress/integration/openingNewFile.spec.ts'
+                  }
+               }
             }
         }
     }
