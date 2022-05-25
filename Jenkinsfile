@@ -26,4 +26,12 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            bat 'npx mochawesome-merge --reportDir mochawesome-report -o mochawesome-report/finalReport.json'
+            bat 'npx marge mochawesome-report/finalReport.json --reportDir ./ --inline'
+        }
+    }
+
 }
