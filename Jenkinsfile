@@ -18,7 +18,7 @@ pipeline {
                 parallel (
                     firstTest: {
                         bat 'docker run --entrypoint=cypress onii-chann run --spec cypress/integration/questionNumber2.spec.ts'
-                    } ,
+                    },
                     secondTest:{
                         bat  'docker run --entrypoint=cypress onii-chann run --spec cypress/integration/openingNewFile.spec.ts'
                     }
