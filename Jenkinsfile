@@ -18,7 +18,7 @@ pipeline {
                 parallel (
                     firstTest: {
                         bat 'docker run --entrypoint=cypress onii-chann run --spec cypress/integration/questionNumber2.spec.ts'
-                    } ,
+                    },
                     secondTest:{
                         bat  'docker run --entrypoint=cypress onii-chann run --spec cypress/integration/openingNewFile.spec.ts'
                     }
@@ -26,4 +26,12 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            bat 'npx mochawesome-merge --reportDir mochawesome-report -o mochawesome-report/finalReport.json'
+            bat 'npx marge mochawesome-report/finalReport.json --reportDir ./ --inline'
+        }
+    }
+
 }
