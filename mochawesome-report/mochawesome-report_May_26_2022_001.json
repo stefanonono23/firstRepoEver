@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-05-26T06:03:07.724Z",
+    "end": "2022-05-26T06:03:31.504Z",
+    "duration": 23780,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3f92463-4a73-4c94-84ca-b7af4216d12f",
+      "title": "",
+      "fullFile": "cypress/integration/questionNumber2.spec.ts",
+      "file": "cypress/integration/questionNumber2.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0003f466-3056-4d8f-8212-156e15879006",
+          "title": "practice question",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "question number 2",
+              "fullTitle": "practice question question number 2",
+              "timedOut": null,
+              "duration": 21389,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\questionNumber2.spec.ts\\\\practice question -- question number 2 (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "var w3School = 'https://www.w3schools.com/';\nvar goToLoginPage = '#w3loginbtn';\nvar userNameInput = '#modalusername';\nvar passwordInput = '#current-password';\nvar loginBuuton = 'Log in';\ncy.visit(w3School);\ncy.wait('@allJpgFiles').its('response.statusCode').should('eq', 200);\ncy.get(goToLoginPage).click();\ncy.get(userNameInput).type(this.userData.email);\ncy.get(passwordInput).type(this.userData.password);\ncy.get('span').contains('Log in').click();\ncy.get('h2').contains('Hi, stefano').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.\n    at Context.eval (https://www.w3schools.com/__cypress/tests?p=cypress\\integration\\questionNumber2.spec.ts:114:12)",
+                "diff": null
+              },
+              "uuid": "3b95a091-b08b-43af-81f2-dcb36ecef780",
+              "parentUUID": "0003f466-3056-4d8f-8212-156e15879006",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3b95a091-b08b-43af-81f2-dcb36ecef780"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21389,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "mochawesome-report",
+        "html": false,
+        "overwrite": false,
+        "timestamp": "longDate"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

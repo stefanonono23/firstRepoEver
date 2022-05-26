@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 3,
+    "suites": 1,
+    "tests": 2,
     "passes": 1,
     "pending": 0,
-    "failures": 2,
+    "failures": 1,
     "start": "2022-05-26T06:02:47.663Z",
-    "end": "2022-05-26T06:03:31.504Z",
-    "duration": 29504,
-    "testsRegistered": 3,
-    "passPercent": 33.333333333333336,
+    "end": "2022-05-26T06:02:58.712Z",
+    "duration": 11049,
+    "testsRegistered": 2,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -17,68 +17,6 @@
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "f3f92463-4a73-4c94-84ca-b7af4216d12f",
-      "title": "",
-      "fullFile": "cypress/integration/questionNumber2.spec.ts",
-      "file": "cypress/integration/questionNumber2.spec.ts",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "0003f466-3056-4d8f-8212-156e15879006",
-          "title": "practice question",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "question number 2",
-              "fullTitle": "practice question question number 2",
-              "timedOut": null,
-              "duration": 21389,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\questionNumber2.spec.ts\\\\practice question -- question number 2 (failed).png\"\n      }\n    ]\n  ]\n}",
-              "code": "var w3School = 'https://www.w3schools.com/';\nvar goToLoginPage = '#w3loginbtn';\nvar userNameInput = '#modalusername';\nvar passwordInput = '#current-password';\nvar loginBuuton = 'Log in';\ncy.visit(w3School);\ncy.wait('@allJpgFiles').its('response.statusCode').should('eq', 200);\ncy.get(goToLoginPage).click();\ncy.get(userNameInput).type(this.userData.email);\ncy.get(passwordInput).type(this.userData.password);\ncy.get('span').contains('Log in').click();\ncy.get('h2').contains('Hi, stefano').should('be.visible');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h2`, but never found it.\n    at Context.eval (https://www.w3schools.com/__cypress/tests?p=cypress\\integration\\questionNumber2.spec.ts:114:12)",
-                "diff": null
-              },
-              "uuid": "3b95a091-b08b-43af-81f2-dcb36ecef780",
-              "parentUUID": "0003f466-3056-4d8f-8212-156e15879006",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [
-            "3b95a091-b08b-43af-81f2-dcb36ecef780"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 21389,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
     {
       "uuid": "b9188c39-2fc5-45f5-95a2-9d774e915df0",
       "title": "",
